@@ -1,0 +1,18 @@
+{
+  "verdict": {
+    "decision": "Release",
+    "n_errors": 0,
+    "n_warn_images": 16,
+    "n_images": 202,
+    "warn_ratio": 0.0792,
+    "reasons": [
+      "không còn lỗi bắt buộc; 16/202 ảnh (7.9%) còn cảnh báo, < ngưỡng 10%"
+    ]
+  },
+  "reviewed": 80,
+  "budget": 80,
+  "seconds": 9.6,
+  "exported": "C:\\Users\\admin\\OneDrive\\Desktop\\K5-L23-DAY09-2A202603135-PhamHuynh-AutoQCPipeline\\submission\\export\\clean_v1",
+  "config_sha1": "208d60ccd2aa94c247acb5e8c2afc61fff76914a",
+  "review_sim_sha1": "7988ca22827f780a7043a2300490e679a1697154"
+}
