@@ -61,6 +61,5 @@ Giả thuyết và cách kiểm:
 **(a)** Quyết định cuối: **Release** dataset `clean_v1` (202 ảnh). Lưu ý cho đợt sau: duyệt nốt 22 ảnh còn lại trong hàng đợi và xử lý điểm mù img_0002 / img_0017 / img_0084~img_0074.
 
 **(b) Có dùng AI (Claude Code).**
-- **Prompt chính:** "viết label_format / gate / autofix / second_opinion theo GUIDE rồi giải thích từng phần"; AI viết code, tôi yêu cầu giải thích từng bước bằng ví dụ thật trước khi chấp nhận.
+- **Prompt chính:** " hỗ trợ viết label_format / gate / autofix / second_opinion theo GUIDE rồi giải thích từng phần"; AI viết code, tôi yêu cầu giải thích từng bước bằng ví dụ thật trước khi chấp nhận.
 - **Cách kiểm:** chạy `pytest` (79/79 qua), thử các edge case trong GUIDE, mở `work/viz` đối chiếu ảnh bị cờ, mở từng cặp ảnh ở các mức `phash_dist` trước khi chọn, chạy pipeline 2 lần để kiểm tái lập (chỉ khác `seconds`).
-- **Một lần AI sai:** AI chạy `make run` trên Windows mà không lường trước pipeline ghi file CRLF trong khi repo lưu LF (`.gitattributes`), nên `manifest_sha1` local lệch với bản Colab dùng → phải đổi `manifest.json` về LF cho khớp. Ngoài ra `check_submission` báo `pipeline\calibrate.py` nhắc `MANIFEST`/`data/calib`: đây là file có sẵn, không sửa; báo nhầm do đường dẫn Windows dùng `\` không khớp danh sách file được bảo vệ.
